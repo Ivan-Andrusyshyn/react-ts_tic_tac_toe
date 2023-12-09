@@ -1,0 +1,26 @@
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.current_move {
+  font-weight: bold;
+}
