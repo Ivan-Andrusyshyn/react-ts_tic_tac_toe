@@ -1,6 +1,9 @@
 ol {
   padding: 0;
   list-style: none;
+  position: absolute;
+  top: 0;
+  right: -200px;
 }
 
 li {

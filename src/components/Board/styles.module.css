@@ -4,9 +4,7 @@
   position: relative;
 }
 .main_container {
-  display: flex;
-  align-items: flex-start;
-  gap: 36px;
+  position: relative;
 }
 .row_container {
   width: 300px;

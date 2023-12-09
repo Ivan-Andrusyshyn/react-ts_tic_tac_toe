@@ -57,22 +57,20 @@ const Board: FC<Props> = ({ xIsNext, squares, onPlay, children }) => {
 
   return (
     <div className={styles.main_container}>
-      <div>
-        <h2 className={winnerData?.winner ? styles.winnerGreeting : ""}>
-          {status}
-        </h2>
-        <div className={styles.wrapper}>
-          {[0, 1, 2].map((row, i) => (
-            <div
-              key={row}
-              className={`${styles.row_container} ${
-                crossOut[stylesWinnerRow ? stylesWinnerRow : ""]
-              }`}
-            >
-              {[0, 1, 2].map((col) => renderSquare(row * 3 + col))}
-            </div>
-          ))}
-        </div>
+      <h2 className={winnerData?.winner ? styles.winnerGreeting : ""}>
+        {status}
+      </h2>
+      <div className={styles.wrapper}>
+        {[0, 1, 2].map((row, i) => (
+          <div
+            key={row}
+            className={`${styles.row_container} ${
+              crossOut[stylesWinnerRow ? stylesWinnerRow : ""]
+            }`}
+          >
+            {[0, 1, 2].map((col) => renderSquare(row * 3 + col))}
+          </div>
+        ))}
       </div>
       {children}
     </div>
