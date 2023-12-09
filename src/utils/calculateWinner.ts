@@ -1,6 +1,11 @@
 import { SquareValue } from "types/globalTypes";
 
-function calculateWinner(squares: SquareValue[]): SquareValue | null {
+interface WinnerInfo {
+  winner: SquareValue | null;
+  line: number[];
+}
+
+function calculateWinner(squares: SquareValue[]): WinnerInfo | null {
   const lines = [
     [0, 1, 2],
     [3, 4, 5],
@@ -14,7 +19,7 @@ function calculateWinner(squares: SquareValue[]): SquareValue | null {
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c] = lines[i];
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-      return squares[a];
+      return { winner: squares[a], line: lines[i] };
     }
   }
   return null;
